@@ -1,5 +1,3 @@
-;; Emacspeak
-
 ;; (add-to-list 'exec-path "/Users/mgflax/gits/emacspeak/servers")
 (add-to-list 'exec-path "/usr/local/bin")
 
@@ -13,24 +11,6 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(setq mac-default-speech-rate 450)
-(setq load-path (cons "~/gits/emacspeak/lisp" load-path))
-(setq emacspeak-directory "~/gits/emacspeak")
-
-(setq dtk-program "log-mac")
-;; (setq dtk-program "mac")
-
-(load-file "~/gits/emacspeak/lisp/mac-voices.el")
-;;; Voice rate:
-(load-file "~/gits/emacspeak/lisp/emacspeak-setup.el")
-;; Uncomment to try sound icons:
-;(emacspeak-toggle-auditory-icons t)
-;(emacspeak-sounds-select-theme "chimes-stereo/")
-(emacspeak-tts-startup-hook)
-;; Mac keyboard (not emacspeak-related though)
-(setq default-input-method "MacOSX")
-(setq mac-command-modifier 'meta)
-(setq mac-option-modifier 'none)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -59,13 +39,4 @@
  ;; If there is more than one, they won't work right.
  )
 
- (require 'ido)
-    (ido-mode t)
-
-(require 'clj-refactor)
-(add-hook 'clojure-mode-hook (lambda ()
-                               (clj-refactor-mode 1)
-                               ;; insert keybinding setup here
-                               ))
-
-(cljr-add-keybindings-with-prefix "C-c C-m")
+(org-babel-load-file "~/.emacs.d/configuration.org")

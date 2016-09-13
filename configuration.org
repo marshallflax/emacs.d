@@ -56,7 +56,7 @@ Use [[https://github.com/hrs/sensible-defaults.el][sensible-defaults.el]] for so
 
 * Add =resources= to =load-path=
 
-#+BEGIN_SRC emacs-lisp :tangle yes
+#+BEGIN_SRC emacs-lisp :tangle no
   (add-to-list 'load-path "~/.emacs.d/resources/")
 #+END_SRC
 
@@ -94,7 +94,7 @@ Bind =C-p= to fuzzy-finding files in the current project.
 
 Define a big ol' bunch of handy utility functions.
 
-#+BEGIN_SRC emacs-lisp :tangle no
+#+BEGIN_SRC emacs-lisp :tangle yes
   (defun hrs/view-buffer-name ()
     "Display the filename of the current buffer."
     (interactive)
@@ -214,7 +214,7 @@ Why not?
 
 ** Custom solarized-dark theme
 
-#+BEGIN_SRC emacs-lisp :tangle no
+#+BEGIN_SRC emacs-lisp :tangle yes
   (when window-system
     (setq solarized-use-variable-pitch nil)
     (setq solarized-height-plus-1 1.0)
@@ -247,7 +247,7 @@ presenting). These functions and bindings let me resize everything all together!
 Note that this overrides the default font-related keybindings from
 =sensible-defaults=.
 
-#+BEGIN_SRC emacs-lisp :tangle no
+#+BEGIN_SRC emacs-lisp :tangle yes
   (setq hrs/default-font "Inconsolata")
   (setq hrs/default-font-size 18)
   (setq hrs/current-font-size hrs/default-font-size)

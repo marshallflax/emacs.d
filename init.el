@@ -1,6 +1,3 @@
-;; (add-to-list 'exec-path "/Users/mgflax/gits/emacspeak/servers")
-(add-to-list 'exec-path "/usr/local/bin")
-
 (require 'package)
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
@@ -23,15 +20,20 @@
  '(cider-annotate-completion-candidates t)
  '(cider-eldoc-display-for-symbol-at-point t)
  '(cider-use-tooltips t)
- '(custom-enabled-themes (quote (deeper-blue)))
+ '(compilation-message-face (quote default))
+ '(cua-global-mark-cursor-color "#2aa198")
+ '(cua-normal-cursor-color "#839496")
+ '(cua-overwrite-cursor-color "#b58900")
+ '(cua-read-only-cursor-color "#859900")
  '(eldoc-idle-delay 10)
  '(emacspeak-auditory-icon-function (quote emacspeak-queue-auditory-icon))
+ '(fci-rule-color "#073642")
  '(line-number-mode nil)
+ '(magit-diff-use-overlays nil)
  '(nrepl-sync-request-timeout 30)
  '(package-selected-packages
    (quote
-    (clj-refactor rainbow-delimiters ess cider cider-eval-sexp-fu ##)))
- '(transient-mark-mode nil))
+    (magit clj-refactor rainbow-delimiters ess cider cider-eval-sexp-fu ##))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

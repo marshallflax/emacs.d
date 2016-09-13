@@ -6,10 +6,10 @@
   (setq mac-default-speech-rate 450)
   (setq load-path (cons "~/gits/emacspeak/lisp" load-path))
   (setq emacspeak-directory "~/gits/emacspeak")
-  
+
   (setq dtk-program "log-mac")
   ;; (setq dtk-program "mac")
-  
+
   (load-file "~/gits/emacspeak/lisp/mac-voices.el")
   ;;; Voice rate:
   (load-file "~/gits/emacspeak/lisp/emacspeak-setup.el")
@@ -31,7 +31,7 @@
                                  (clj-refactor-mode 1)
                                  ;; insert keybinding setup here
                                  ))
-  
+
   (cljr-add-keybindings-with-prefix "C-c C-m")
   (require 'ido)
     (ido-mode t)
@@ -214,7 +214,7 @@ Why not?
 
 ** Custom solarized-dark theme
 
-#+BEGIN_SRC emacs-lisp :tangle yes
+#+BEGIN_SRC emacs-lisp :tangle no
   (when window-system
     (setq solarized-use-variable-pitch nil)
     (setq solarized-height-plus-1 1.0)
@@ -673,26 +673,26 @@ I like to see an outline of pretty bullets instead of a list of asterisks.
 I like seeing a little downward-pointing arrow instead of the usual ellipsis
 (=...=) that org displays when there's stuff under a header.
 
-#+BEGIN_SRC emacs-lisp :tangle no
+#+BEGIN_SRC emacs-lisp :tangle yes
   (setq org-ellipsis "⤵")
 #+END_SRC
 
 Use syntax highlighting in source blocks while editing.
 
-#+BEGIN_SRC emacs-lisp :tangle no
+#+BEGIN_SRC emacs-lisp :tangle yes
   (setq org-src-fontify-natively t)
 #+END_SRC
 
 Make TAB act as if it were issued in a buffer of the language's major mode.
 
-#+BEGIN_SRC emacs-lisp :tangle no
+#+BEGIN_SRC emacs-lisp :tangle yes
   (setq org-src-tab-acts-natively t)
 #+END_SRC
 
 When editing a code snippet, use the current window rather than popping open a
 new one (which shows the same information).
 
-#+BEGIN_SRC emacs-lisp :tangle no
+#+BEGIN_SRC emacs-lisp :tangle yes
   (setq org-src-window-setup 'current-window)
 #+END_SRC
 
@@ -751,7 +751,7 @@ place in the archive.
 
 Record the time that a todo was archived.
 
-#+BEGIN_SRC emacs-lisp :tangle no
+#+BEGIN_SRC emacs-lisp :tangle yes
   (setq org-log-done 'time)
 #+END_SRC
 
@@ -1003,13 +1003,13 @@ Ask before recursively /deleting/ a directory, though.
 
 Assume that I always want to kill the current buffer when hitting =C-x k=.
 
-#+BEGIN_SRC emacs-lisp :tangle no
+#+BEGIN_SRC emacs-lisp :tangle yes
   (global-set-key (kbd "C-x k") 'hrs/kill-current-buffer)
 #+END_SRC
 
 ** Look for executables in =/usr/local/bin=.
 
-#+BEGIN_SRC emacs-lisp :tangle no
+#+BEGIN_SRC emacs-lisp :tangle yes
   (setq exec-path (append exec-path '("/usr/local/bin")))
 #+END_SRC
 ** Use =company-mode= everywhere
@@ -1260,7 +1260,7 @@ Enable [[https://github.com/hrs/engine-mode][engine-mode]] and define a few usef
 
 Just a few handy functions.
 
-#+BEGIN_SRC emacs-lisp :tangle no
+#+BEGIN_SRC emacs-lisp :tangle yes
   (global-set-key (kbd "C-w") 'backward-kill-word)
   (global-set-key (kbd "C-x C-k") 'kill-region)
   (global-set-key (kbd "M-/") 'hippie-expand)

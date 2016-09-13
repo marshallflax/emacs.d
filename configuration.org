@@ -295,7 +295,7 @@ Note that this overrides the default font-related keybindings from
 containing point. It makes it a bit easier to find point, and it's useful when
 pairing or presenting code.
 
-#+BEGIN_SRC emacs-lisp :tangle no
+#+BEGIN_SRC emacs-lisp :tangle yes
   (when window-system
     (global-hl-line-mode))
 #+END_SRC
@@ -306,7 +306,7 @@ I'd rather have only a few necessary mode identifiers on my modeline. This
 either hides or "renames" a variety of major or minor modes using the =diminish=
 package.
 
-#+BEGIN_SRC emacs-lisp :tangle no
+#+BEGIN_SRC emacs-lisp :tangle yes
   (defmacro diminish-minor-mode (filename mode &optional abbrev)
     `(eval-after-load (symbol-name ,filename)
        '(diminish ,mode ,abbrev)))
@@ -416,7 +416,7 @@ all of them. That includes using =paredit-mode= to balance parentheses (and
 more!), =rainbow-delimiters= to color matching parentheses, and highlighting the
 whole expression when point is on a paren.
 
-#+BEGIN_SRC emacs-lisp :tangle no
+#+BEGIN_SRC emacs-lisp :tangle yes
   (setq lispy-mode-hooks
         '(clojure-mode-hook
           emacs-lisp-mode-hook
@@ -664,7 +664,7 @@ I add a bunch of hooks to =term-mode=:
 
 I like to see an outline of pretty bullets instead of a list of asterisks.
 
-#+BEGIN_SRC emacs-lisp :tangle no
+#+BEGIN_SRC emacs-lisp :tangle yes
   (add-hook 'org-mode-hook
             (lambda ()
               (org-bullets-mode t)))

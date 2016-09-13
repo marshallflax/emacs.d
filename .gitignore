@@ -44,3 +44,4 @@ flycheck_*.el
 .projectile
 ido.last
 configuration.el
+.*.swp

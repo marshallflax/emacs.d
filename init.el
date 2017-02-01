@@ -32,6 +32,7 @@
  '(cua-read-only-cursor-color "#859900")
  '(eldoc-idle-delay 10)
  '(electric-indent-mode t)
+ '(elm-tags-exclude-elm-stuff nil)
  '(emacspeak-auditory-icon-function (quote emacspeak-queue-auditory-icon))
  '(fci-rule-color "#073642")
  '(initial-frame-alist (quote ((fullscreen . maximized))))
@@ -47,7 +48,7 @@
      ("" . "https://melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (psc-ide purescript-mode psci exec-path-from-shell bongo flycheck company elm-mode circe org-bullets magit clj-refactor rainbow-delimiters ess cider cider-eval-sexp-fu ##))))
+    (diminish psc-ide purescript-mode psci exec-path-from-shell bongo flycheck company elm-mode circe org-bullets magit clj-refactor rainbow-delimiters ess cider cider-eval-sexp-fu ##))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -59,5 +60,6 @@
 (org-babel-load-file "~/.emacs.d/configuration.org")
 
 (company-mode)
+(winner-mode 1)
 (add-to-list 'company-backends 'company-elm)
 (when (memq window-system '(mac ns)) (exec-path-from-shell-initialize))
